@@ -31,4 +31,9 @@ public class PlayerControls : MonoBehaviour
         //Keeping the camera position in bounds
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -30f, 30f), transform.position.y, Mathf.Clamp(transform.position.z, -30f, 30));
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        SceneManager.LoadScene(0);
+    }
 }
